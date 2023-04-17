@@ -1,0 +1,34 @@
+{
+  "name": "mern-ecommerce",
+  "version": "1.0.0",
+  "description": "Mern ecommerce",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarthikBharadwaj-HM/mern_ecommerce_shop.git"
+  },
+  "author": "Karthik Bharadwaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarthikBharadwaj-HM/mern_ecommerce_shop/issues"
+  },
+  "homepage": "https://github.com/KarthikBharadwaj-HM/mern_ecommerce_shop#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^7.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
